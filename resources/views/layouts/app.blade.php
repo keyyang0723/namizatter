@@ -21,7 +21,6 @@
         <!-- Font Awesome -->
         <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-
     </head>
     <body>
         <div id="app">
@@ -53,6 +52,10 @@
                                     </li>
                                 @endif
                             @else
+                                <!-- 追加 -->
+                                <li class="nav-item mr-5">
+                                    <a href="{{ url('tweets/create') }}" class="btn btn-md btn-primary">ツイートする</a>
+                                </li>
                                 <li class="nav-item">
                                     <img src="{{ asset('storage/profile_image/' .auth()->user()->profile_image) }}" class="rounded-circle" width="50" height="50">
                                 </li>
